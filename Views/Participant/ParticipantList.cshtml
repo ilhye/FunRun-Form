@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Villasor_FunRun.Models.Entities.Participant>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Participants</h1>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Distance</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participant in Model)
+                {
+                    <tr>
+                        <td>@participant.Id</td>
+                        <td>@participant.Name</td>
+                        <td>@participant.Email</td>
+                        <td>@participant.PNumber</td>
+                        <td>@participant.distance</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
